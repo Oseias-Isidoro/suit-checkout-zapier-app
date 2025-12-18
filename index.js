@@ -1,6 +1,4 @@
-const repoTrigger = require('./triggers/repo');
-const issueCreate = require('./creates/issue');
-const issueTrigger = require('./triggers/issue');
+const tipoTrigger = require('./triggers/tipo');
 const {
   config: authentication,
   befores = [],
@@ -24,17 +22,14 @@ const App = {
 
   // If you want your trigger to show up, you better include it here!
   triggers: {
-    [repoTrigger.key]: repoTrigger,
-    [issueTrigger.key]: issueTrigger,
+    [tipoTrigger.key]: tipoTrigger,
   },
 
   // If you want your searches to show up, you better include it here!
   searches: {},
 
   // If you want your creates to show up, you better include it here!
-  creates: {
-    [issueCreate.key]: issueCreate,
-  },
+  creates: {},
 };
 
 // Finally, export the app.
